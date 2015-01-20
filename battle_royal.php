@@ -3,9 +3,10 @@
  // Stop the script giving time out errors..
     set_time_limit(0);
 
-  $obj = new Player;
-  
-    // This opens standard in ready for interactive input..
+	$obj = new Player;
+	$battle='N';
+    
+	// This opens standard in ready for interactive input..
     define('STDIN',fopen("php://stdin","r"));
 
 				echo "#=====================================================#\n\n";
@@ -106,12 +107,8 @@
 				echo "# Current Player  :$num_char	   	                      #\n";
 				
 				for($i=1;$i<=$num_char;$i++){
-					if($player[$i]['gameover']=='Y'){
-						$ket = ' ( Game Over ) ';
-					}else{
-						$ket = "";
-					}
-					echo "#                      - ".$player[$i]['name']. $ket ."                   #\n";
+					
+					echo "#                      - ".$player[$i]['name'] ."                   #\n";
 				}
 				
 				echo "# * max player 2 atau 3                               #\n";
